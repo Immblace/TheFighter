@@ -3,19 +3,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private float bulletDamage = 1f;
-    private Vector3 bulletDirection;
     private float speed = 10f;
 
 
     void Update()
     {
-        transform.Translate(bulletDirection * speed * Time.deltaTime);
+        transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 
 
-    public void Initialization(Vector3 direction, float damage)
+    public void Initialization(float damage)
     {
-        bulletDirection = direction;
         bulletDamage = damage;
     }
 

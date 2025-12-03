@@ -10,10 +10,10 @@ public class Weapon : MonoBehaviour
 
 
 
-    public void Shoot(Vector3 bulletDirection)
+    public void Shoot()
     {
-        Bullet bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-        bullet.Initialization(bulletDirection, damage);
+        Bullet bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        bullet.Initialization(damage);
     }
 
 

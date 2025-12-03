@@ -21,6 +21,7 @@ public class Player : MonoBehaviour, IDamagable
     private void Update()
     {
         PlayerMove();
+        WeaponRotation();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -51,18 +52,30 @@ public class Player : MonoBehaviour, IDamagable
         }
     }
 
+    private void WeaponRotation()
+    {
+        if (weapon != null)
+        {
+            Vector2 input = new Vector2(joystick.Horizontal, joystick.Vertical);
+
+            if (input.magnitude > 0.2f)
+            {
+                float angle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
+
+                if (transform.localScale.x < 0f)
+                {
+                    angle += 180f;
+                }
+                weapon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            }
+        }
+    }
+
     private void Attack()
     {
         if (weapon != null)
         {
-            if (transform.localScale.x < 0)
-            {
-                weapon.Shoot(Vector3.left);
-            }
-            else
-            {
-                weapon.Shoot(Vector3.right);
-            }
+            weapon.Shoot();
         }
     }
 
