@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\healthslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\healthslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\idamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\idamagable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HealthSlider.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\HealthSlider.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthSlider.cs",
@@ -46,12 +46,11 @@
               "RelativeToolTip": "Assets\\Scripts\\HealthSlider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T09:28:40.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T09:28:40.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAE4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T17:12:26.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T17:12:26.827Z"
             },
             {
               "$type": "Document",
@@ -70,14 +68,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T12:21:26.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IDamagable.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\IDamagable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\IDamagable.cs",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Assets\\Scripts\\IDamagable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T17:09:34.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T17:09:34.728Z"
             },
             {
               "$type": "Document",
@@ -96,22 +93,23 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
               "ToolTip": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T16:19:46.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Weapon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon.cs",
               "ToolTip": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Weapon.cs",
               "RelativeToolTip": "Assets\\Scripts\\Weapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T16:16:53.937Z"
+              "WhenOpened": "2025-12-02T16:16:53.937Z",
+              "EditorCaption": ""
             }
           ]
         }

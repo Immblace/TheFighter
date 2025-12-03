@@ -31,7 +31,7 @@ public class Player : MonoBehaviour, IDamagable
 
     private void PlayerMove()
     {
-        transform.position += new Vector3(joystick.Horizontal, joystick.Vertical, 0f) * speed * Time.deltaTime;
+        transform.parent.position += new Vector3(joystick.Horizontal, joystick.Vertical, 0f) * speed * Time.deltaTime;
 
         if (Mathf.Abs(joystick.Horizontal) != 0 || Mathf.Abs(joystick.Vertical) != 0)
         {
