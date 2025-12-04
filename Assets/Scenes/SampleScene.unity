@@ -479,7 +479,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 216179633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 253197014}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: InventorySwitcher
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &216179633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &253197011
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22331,7 +22343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22439,7 +22451,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1267927125}
   - component: {fileID: 1267927127}
-  - component: {fileID: 1267927126}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -22470,20 +22481,6 @@ RectTransform:
   m_AnchoredPosition: {x: -6.69, y: 0.76}
   m_SizeDelta: {x: 54.5544, y: 12.4908}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1267927126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267927124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f3ce34b7d37ea40977dc6da8731dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1267927127}
-  enemy: {fileID: 1425412658}
 --- !u!114 &1267927127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22622,17 +22619,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1425412658 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3241669520497623338, guid: 89a353c21bc9e614fbb38b481af3674c, type: 3}
-  m_PrefabInstance: {fileID: 149029468413016897}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1b542ad901b77b4392c627f58c61311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1458991522
 GameObject:
   m_ObjectHideFlags: 0

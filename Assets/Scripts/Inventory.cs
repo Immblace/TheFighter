@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject[] slots;
     [SerializeField] private TextMeshProUGUI countTxt;
     public bool[] isFull = new bool[6];
+    private bool isActive;
 
     private int slot1;
     private int slot2;
@@ -86,6 +87,12 @@ public class Inventory : MonoBehaviour
             countTxt.text = "";
         }
 
+    }
+
+    public void InventorySwitcher()
+    {
+        isActive = !isActive;
+        gameObject.SetActive(isActive);
     }
 
 

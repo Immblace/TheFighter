@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\iteminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iteminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|c:\\users\\metanich\\desktop\\unitygames\\fighter2d\\assets\\scripts\\iteminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iteminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D3AC938-44E9-33CE-5171-AB40BF69C807}|Assembly-CSharp.csproj|C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Slot.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Slot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Slot.cs",
@@ -62,24 +62,25 @@
               "RelativeToolTip": "Assets\\Scripts\\Slot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T13:42:12.934Z"
+              "WhenOpened": "2025-12-04T13:42:12.934Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ItemInventory.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\ItemInventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ItemInventory.cs",
               "ToolTip": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\ItemInventory.cs",
               "RelativeToolTip": "Assets\\Scripts\\ItemInventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T15:05:15.34Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item.cs",
@@ -92,13 +93,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory.cs",
               "ToolTip": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Inventory.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T12:57:56.432Z",
               "EditorCaption": ""
@@ -165,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\Metanich\\Desktop\\UnityGames\\Fighter2D\\Assets\\Scripts\\Weapon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon.cs",

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ItemInventory : MonoBehaviour
 {
     [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private Button dropBtn;
     private Player player;
 
     private void Start()
@@ -11,6 +12,12 @@ public class ItemInventory : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
+    
+    public void dropp()
+    {
+        dropBtn.gameObject.SetActive(true);
+        dropBtn.onClick.AddListener(DropItem);
+    }
 
     public void DropItem()
     {
