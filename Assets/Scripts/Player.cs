@@ -10,6 +10,7 @@ public class Player : MonoBehaviour, IDamagable
     [SerializeField] private Slider healthBar;
     private float health = 10;
     private Animator animator;
+    public Inventory inventory;
 
     private void Start()
     {
