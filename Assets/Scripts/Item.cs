@@ -8,7 +8,6 @@ public class Item : MonoBehaviour
 
 
 
-
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();

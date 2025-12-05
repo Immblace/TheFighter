@@ -6,9 +6,10 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private float stopDistance = 1.7f;
+    [SerializeField] private GameObject[] dropItemPrefabs;
     private float health = 10f;
     private float speed = 1.2f;
-    private float stopDistance = 1.7f;
     private Animator animator;
     private Player player;
     public event Action EnemyGetDamage;
@@ -92,9 +93,11 @@ public class Enemy : MonoBehaviour, IDamagable
 
         if (health == 0)
         {
+            Instantiate(dropItemPrefabs[UnityEngine.Random.Range(0,dropItemPrefabs.Length)], transform.position, Quaternion.identity);
             Destroy(transform.parent.gameObject);
         }
     }
+
 
     public float EnemyHPInfo()
     {

@@ -481,6 +481,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  stopDistance: 1.3
+  dropItemPrefabs:
+  - {fileID: 1267059195643162800, guid: f05970632abed564abdb5345d22fff86, type: 3}
+  - {fileID: 1609563415702380790, guid: 345b61996f8ac2944a37e8839575a0b0, type: 3}
 --- !u!1 &4127654604266475752
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2342639270584522211}
   m_Layer: 0
-  m_Name: EnemyWrapper
+  m_Name: MonsterEnemyWrapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

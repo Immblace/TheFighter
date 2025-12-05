@@ -72,7 +72,7 @@ public class Player : MonoBehaviour, IDamagable
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         if (weapon != null)
         {
