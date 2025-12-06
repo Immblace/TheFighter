@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour, IDamagable
     private float speed = 1.2f;
     private Animator animator;
     private Player player;
-    public event Action EnemyGetDamage;
+    public event Action onEnemyGetDamage;
     private bool PlayerDetection = false;
     private float timeToAttack = 0.5f;
     private bool readyforAttack = false;
@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour, IDamagable
     public void GetDamage(float damage)
     {
         health -= damage;
-        EnemyGetDamage?.Invoke();
+        onEnemyGetDamage?.Invoke();
 
         if (health == 0)
         {

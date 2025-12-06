@@ -12,8 +12,11 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        Bullet bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        bullet.Initialization(damage);
+        if (AmmoManager.instance.TryUseAmmo())
+        {
+            Bullet bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+            bullet.Initialization(damage);
+        }
     }
 
 

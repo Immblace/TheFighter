@@ -12,8 +12,6 @@ public class Slot : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
-
-    
     private void Update()
     {
         if (transform.childCount < 1)
@@ -21,7 +19,6 @@ public class Slot : MonoBehaviour
             player.inventory.isFull[slotNumber] = false;
         }
     }
-
 
     public void ShowDropBtn()
     {

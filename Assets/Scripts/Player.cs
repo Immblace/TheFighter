@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour, IDamagable
     private float health = 10;
     private Animator animator;
     public Inventory inventory;
+    public event Action onDead;
 
     private void Start()
     {
@@ -82,9 +84,16 @@ public class Player : MonoBehaviour, IDamagable
 
     public void GetDamage(float damage)
     {
-        health-= damage;
+        health -= damage;
         healthBar.value = health / 10;
+
+        if (health == 0)
+        {
+            onDead?.Invoke();
+            Destroy(transform.parent.gameObject);
+        }
     }
+
 
     private enum States
     {

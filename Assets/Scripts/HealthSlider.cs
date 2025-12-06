@@ -9,12 +9,12 @@ public class HealthSlider : MonoBehaviour
 
     private void OnEnable()
     {
-        enemy.EnemyGetDamage += RefreshHealthBar;
+        enemy.onEnemyGetDamage += RefreshHealthBar;
     }
 
     private void OnDisable()
     {
-        enemy.EnemyGetDamage -= RefreshHealthBar;
+        enemy.onEnemyGetDamage -= RefreshHealthBar;
     }
 
     private void RefreshHealthBar()

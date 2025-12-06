@@ -12,7 +12,6 @@ public class ItemInventory : MonoBehaviour
     }
 
     
-
     public void DropItem()
     {
         Vector3 newPos = new Vector3(player.transform.position.x - 2f, player.transform.position.y - 1f, 0f);
