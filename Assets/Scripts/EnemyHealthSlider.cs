@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthSlider : MonoBehaviour
+public class EnemyHealthSlider : MonoBehaviour
 {
     [SerializeField] private Slider healthBar;
     [SerializeField] private Enemy enemy;
@@ -17,9 +17,8 @@ public class HealthSlider : MonoBehaviour
         enemy.onEnemyGetDamage -= RefreshHealthBar;
     }
 
-    private void RefreshHealthBar()
+    private void RefreshHealthBar(float EnemyHealth)
     {
-        float currentHP = enemy.EnemyHPInfo();
-        healthBar.value = currentHP / 10;
+        healthBar.value = EnemyHealth / 10;
     }
 }

@@ -26,17 +26,23 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
         foreach (var enemy in enemies)
         {
-            Destroy(enemy.transform.parent.gameObject);
+            if (enemy != null)
+            {
+                Destroy(enemy.transform.parent.gameObject);
+            }
         }
         
 
         foreach (var obj in SceneObjects)
         {
-            obj.SetActive(false);
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
         }
 
         GameOverMenu.SetActive(true);

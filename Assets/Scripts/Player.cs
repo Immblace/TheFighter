@@ -8,16 +8,15 @@ public class Player : MonoBehaviour, IDamagable
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private float speed = 5;
     [SerializeField] private Weapon weapon;
-    [SerializeField] private Slider healthBar;
     private float health = 10;
     private Animator animator;
     public Inventory inventory;
     public event Action onDead;
+    public event Action<float> onGetDamage;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        healthBar.value = health / 10;
     }
 
 
@@ -85,13 +84,30 @@ public class Player : MonoBehaviour, IDamagable
     public void GetDamage(float damage)
     {
         health -= damage;
-        healthBar.value = health / 10;
+        onGetDamage?.Invoke(health);
 
         if (health == 0)
         {
             onDead?.Invoke();
             Destroy(transform.parent.gameObject);
         }
+    }
+
+    public PlayerData GetPlayerData()
+    {
+        Vector3 pos = transform.parent.position;
+
+        return new PlayerData()
+        {
+            x = pos.x,
+            y = pos.y
+        };
+    }
+
+    public void ApplyPlayerData(PlayerData playerData)
+    {
+        Vector3 position = new Vector3(playerData.x, playerData.y, 0f);
+        transform.parent.position = position;
     }
 
 
