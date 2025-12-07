@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour, IDamagable
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float stopDistance = 1.7f;
     [SerializeField] private GameObject[] dropItemPrefabs;
+    [SerializeField] private int enemyType;
     private float health = 10f;
     private float speed = 1.2f;
     private Animator animator;
@@ -129,6 +130,18 @@ public class Enemy : MonoBehaviour, IDamagable
             PlayerDetection = false;
             player = null;
         }
+    }
+
+    public EnemyData GetEnemyData()
+    {
+        Vector3 pos = transform.parent.position;
+        return new EnemyData()
+        {
+            enemyType = enemyType,
+            x = pos.x,
+            y = pos.y
+            
+        };
     }
 
     private enum States

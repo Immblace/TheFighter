@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183530133837455174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6753391}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.03999996, y: 0.11570668}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 3.86, y: 3.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &644008570691766294
 Canvas:
@@ -485,6 +485,7 @@ MonoBehaviour:
   dropItemPrefabs:
   - {fileID: 1267059195643162800, guid: f05970632abed564abdb5345d22fff86, type: 3}
   - {fileID: 1609563415702380790, guid: 345b61996f8ac2944a37e8839575a0b0, type: 3}
+  enemyType: 0
 --- !u!1 &4127654604266475752
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +770,7 @@ GameObject:
   - component: {fileID: 2342639270584522211}
   m_Layer: 0
   m_Name: MonsterEnemyWrapper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

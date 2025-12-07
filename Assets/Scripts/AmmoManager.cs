@@ -26,4 +26,18 @@ public class AmmoManager : MonoBehaviour
         ammoText.text = "ammo: " + CurrentAmmo + "/" + MaxAmmo; 
         return true;
     }
+
+    public AmmoData GetAmmoData()
+    {
+        return new AmmoData()
+        {
+            Ammo = CurrentAmmo
+        };
+    }
+
+    public void ApplyAmmoData(AmmoData data)
+    {
+        CurrentAmmo = data.Ammo;
+        ammoText.text = "ammo: " + CurrentAmmo + "/" + MaxAmmo;
+    }
 }

@@ -6,18 +6,21 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] Enemies;
     [SerializeField] private BoxCollider2D[] SpawnZones;
-    [SerializeField] private int countSpawnEnemy;
+    public bool spawnEnabled = true;
 
 
     private void Start()
     {
-        SpawnEnemies();
+        if (spawnEnabled)
+        {
+            SpawnEnemies();
+        }
     }
 
 
     private void SpawnEnemies()
     {
-        for (int i = 0; i < countSpawnEnemy; i++)
+        for (int i = 0; i < SpawnZones.Length; i++)
         {
             Bounds bounds = SpawnZones[i].bounds;
             Vector3 spawnZone = new Vector3(UnityEngine.Random.Range(bounds.min.x, bounds.max.x), UnityEngine.Random.Range(bounds.min.y, bounds.max.y), 0f);
@@ -26,5 +29,35 @@ public class EnemySpawner : MonoBehaviour
     }
 
 
+    public List<EnemyData> GetAllEnemiesData()
+    {
+        List<EnemyData> list = new List<EnemyData>();
+        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
+        foreach (Enemy enemy in enemies)
+        {
+            list.Add(enemy.GetEnemyData());
+        }
+
+        return list;
+    }
+
+    public void SpawnEnemiesFromSave(List<EnemyData> enemies)
+    {
+        foreach (var e in enemies)
+        {
+            GameObject newEnemy = Instantiate(Enemies[e.enemyType], new Vector3(e.x, e.y, 0f), Quaternion.identity);
+        }
+    }
+
+    public void ClearAllEnemies()
+    {
+        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+        spawnEnabled = false;
+
+        foreach (var item in enemies)
+        {
+            Destroy(item.transform.parent.gameObject);
+        }
+    }
 }
