@@ -13,18 +13,12 @@ public class DropButton : MonoBehaviour
     }
 
 
-
-
-
-
-
     public void DropItem(Action dropFunction)
     {
         dropBtn.gameObject.SetActive(true);
         dropBtn.onClick.AddListener(dropFunction.Invoke);
         dropBtn.onClick.RemoveAllListeners();
         dropBtn.gameObject.SetActive(false);
-        
     }
 
 }

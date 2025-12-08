@@ -7,6 +7,7 @@ public class Slot : MonoBehaviour
     [SerializeField] private Button dropButton;
     private Player player;
 
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();

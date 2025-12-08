@@ -17,7 +17,6 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-
     private void SpawnEnemies()
     {
         for (int i = 0; i < SpawnZones.Length; i++)
@@ -27,7 +26,6 @@ public class EnemySpawner : MonoBehaviour
             GameObject enemy = Instantiate(Enemies[UnityEngine.Random.Range(0,Enemies.Length)], spawnZone, Quaternion.identity);
         }
     }
-
 
     public List<EnemyData> GetAllEnemiesData()
     {
@@ -46,7 +44,8 @@ public class EnemySpawner : MonoBehaviour
     {
         foreach (var e in enemies)
         {
-            GameObject newEnemy = Instantiate(Enemies[e.enemyType], new Vector3(e.x, e.y, 0f), Quaternion.identity);
+            GameObject newEnemy = Instantiate(Enemies[e.enemyType]);
+            newEnemy.GetComponentInChildren<Enemy>().ApplyEnemyData(e);
         }
     }
 

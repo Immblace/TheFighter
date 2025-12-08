@@ -14,21 +14,16 @@ public class Player : MonoBehaviour, IDamagable
     public event Action onDead;
     public event Action<float> onGetDamage;
 
+
     private void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-
     private void Update()
     {
         PlayerMove();
         WeaponRotation();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Attack();
-        }
     }
 
     private void PlayerMove()
@@ -99,6 +94,7 @@ public class Player : MonoBehaviour, IDamagable
 
         return new PlayerData()
         {
+            health = health,
             x = pos.x,
             y = pos.y
         };
@@ -106,10 +102,11 @@ public class Player : MonoBehaviour, IDamagable
 
     public void ApplyPlayerData(PlayerData playerData)
     {
+        health = playerData.health;
+        onGetDamage?.Invoke(health);
         Vector3 position = new Vector3(playerData.x, playerData.y, 0f);
         transform.parent.position = position;
     }
-
 
     private enum States
     {

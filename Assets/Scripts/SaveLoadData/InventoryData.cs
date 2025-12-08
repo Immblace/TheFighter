@@ -5,7 +5,8 @@ using UnityEngine;
 [Serializable]
 public class InventoryData 
 {
-    
+    public int itemType;
+    public int slotNumber;
 
 
 }

@@ -5,7 +5,6 @@ public class CameraScript : MonoBehaviour
     [SerializeField] private Transform playerPos;
 
 
-
     private void LateUpdate()
     {
         if (playerPos != null)

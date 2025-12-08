@@ -7,9 +7,6 @@ public class Weapon : MonoBehaviour
     private float damage = 1f;
 
 
-
-
-
     public void Shoot()
     {
         if (AmmoManager.instance.TryUseAmmo())
@@ -18,7 +15,4 @@ public class Weapon : MonoBehaviour
             bullet.Initialization(damage);
         }
     }
-
-
-
 }

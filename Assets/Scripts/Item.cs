@@ -7,12 +7,10 @@ public class Item : MonoBehaviour
     private Player player;
 
 
-
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

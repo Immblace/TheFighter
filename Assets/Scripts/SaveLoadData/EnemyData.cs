@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyData 
 {
     public int enemyType;
+    public float health;
     public float x;
     public float y;
 }

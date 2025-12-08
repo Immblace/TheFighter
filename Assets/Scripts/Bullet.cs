@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 
-
     public void Initialization(float damage)
     {
         bulletDamage = damage;

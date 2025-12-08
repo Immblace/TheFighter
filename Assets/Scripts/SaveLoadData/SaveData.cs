@@ -8,6 +8,6 @@ public class SaveData
 {
     public PlayerData player;
     public List<EnemyData> enemies;
-    public InventoryData inventory;
+    public List<InventoryData> inventoryItems;
     public AmmoData ammo;
 }

@@ -83,8 +83,6 @@ public class Enemy : MonoBehaviour, IDamagable
             readyforAttack = false;
             timeToAttack = UnityEngine.Random.Range(0.8f, 3.5f);
         }
-
-
     }
 
     public void GetDamage(float damage)
@@ -97,12 +95,6 @@ public class Enemy : MonoBehaviour, IDamagable
             Instantiate(dropItemPrefabs[UnityEngine.Random.Range(0,dropItemPrefabs.Length)], transform.position, Quaternion.identity);
             Destroy(transform.parent.gameObject);
         }
-    }
-
-
-    public float EnemyHPInfo()
-    {
-        return health;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -138,10 +130,17 @@ public class Enemy : MonoBehaviour, IDamagable
         return new EnemyData()
         {
             enemyType = enemyType,
+            health = health,
             x = pos.x,
             y = pos.y
-            
         };
+    }
+
+    public void ApplyEnemyData(EnemyData data)
+    {
+        transform.parent.position = new Vector3(data.x, data.y, 0f);
+        health = data.health;
+        onEnemyGetDamage?.Invoke(health);
     }
 
     private enum States

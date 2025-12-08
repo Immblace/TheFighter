@@ -8,76 +8,48 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private GameObject[] slots;
     [SerializeField] private TextMeshProUGUI countTxt;
+    [SerializeField] private GameObject[] itemPrefabs;
     public bool[] isFull = new bool[6];
     private bool isActive;
 
-    private int slot1;
-    private int slot2;
-    private int slot3;
-    private int slot4;
-    private int slot5;
-    private int slot6;
 
-    private int sum;
-
+    private void Start()
+    {
+        CalculateSlots();
+    }
 
     private void Update()
     {
-        if (isFull[0])
-        {
-            slot1 = 1;
-        }
-        else
-        {
-            slot1 = 0;
-        }
+        CheckInventoryCount();
+    }
 
-        if (isFull[1])
-        {
-            slot2 = 1;
-        }
-        else
-        {
-            slot2 = 0;
-        }
+    public void InventorySwitcher()
+    {
+        isActive = !isActive;
+        gameObject.SetActive(isActive);
+    }
 
-        if (isFull[2])
+    private void CalculateSlots()
+    {
+        for (int i = 0; i < slots.Length; i++)
         {
-            slot3 = 1;
+            if (slots[i].transform.childCount > 0)
+            {
+                isFull[i] = true;
+            }
         }
-        else
-        {
-            slot3 = 0;
-        }
+    }
 
-        if (isFull[3])
+    private void CheckInventoryCount()
+    {
+        int sum = 0;
+        for (int i = 0; i < slots.Length; i++)
         {
-            slot4 = 1;
+            if (isFull[i])
+            {
+                sum++;
+            }
         }
-        else
-        {
-            slot4 = 0;
-        }
-
-        if (isFull[4])
-        {
-            slot5 = 1;
-        }
-        else
-        {
-            slot5 = 0;
-        }
-
-        if (isFull[5])
-        {
-            slot6 = 1;
-        }
-        else
-        {
-            slot6 = 0;
-        }
-
-        sum = slot1 + slot2 + slot3 + slot4 + slot5 + slot6;
 
         if (sum > 1)
         {
@@ -87,15 +59,7 @@ public class Inventory : MonoBehaviour
         {
             countTxt.text = "";
         }
-
     }
-
-    public void InventorySwitcher()
-    {
-        isActive = !isActive;
-        gameObject.SetActive(isActive);
-    }
-
 
     public void CheckSlots(GameObject item)
     {
@@ -110,7 +74,33 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public List<InventoryData> GetInventoryData()
+    {
+        List<InventoryData> inventoryItems = new List<InventoryData>();
 
+        for (int i = 0; i < isFull.Length; i++)
+        {
+            if (isFull[i])
+            {
+                ItemInventory itemInv = slots[i].GetComponentInChildren<ItemInventory>();
+                InventoryData itemData = new InventoryData()
+                {
+                    itemType = itemInv.GetItemType(),
+                    slotNumber = i
+                };
 
+                inventoryItems.Add(itemData);
+            }
+        }
+        return inventoryItems;
+    }
+
+    public void ApplyInventoryData(List<InventoryData> data)
+    {
+        foreach (var item in data)
+        {
+            GameObject itemPrefab = Instantiate(itemPrefabs[item.itemType], slots[item.slotNumber].transform);
+        }
+    }
 
 }

@@ -8,11 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject GameOverMenu;
     [SerializeField] private GameObject[] SceneObjects;
 
+
     private void Start()
     {
         GameOverMenu.SetActive(false);
     }
-
 
     private void OnEnable()
     {
@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
             }
         }
         
-
         foreach (var obj in SceneObjects)
         {
             if (obj != null)
@@ -44,7 +43,6 @@ public class GameManager : MonoBehaviour
                 obj.SetActive(false);
             }
         }
-
         GameOverMenu.SetActive(true);
     }
 
