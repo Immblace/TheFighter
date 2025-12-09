@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IDamagable
     [SerializeField] private FixedJoystick joystick;
     [SerializeField] private float speed = 5;
     [SerializeField] private Weapon weapon;
+    private Rigidbody2D rb;
     private float health = 10;
     private Animator animator;
     public Inventory inventory;
@@ -17,18 +18,23 @@ public class Player : MonoBehaviour, IDamagable
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        PlayerMove();
         WeaponRotation();
+    }
+
+    private void FixedUpdate()
+    {
+        PlayerMove();
     }
 
     private void PlayerMove()
     {
-        transform.parent.position += new Vector3(joystick.Horizontal, joystick.Vertical, 0f) * speed * Time.deltaTime;
+        rb.position += joystick.Direction * speed * Time.fixedDeltaTime;
 
         if (Mathf.Abs(joystick.Horizontal) != 0 || Mathf.Abs(joystick.Vertical) != 0)
         {
@@ -84,13 +90,13 @@ public class Player : MonoBehaviour, IDamagable
         if (health == 0)
         {
             onDead?.Invoke();
-            Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
         }
     }
 
     public PlayerData GetPlayerData()
     {
-        Vector3 pos = transform.parent.position;
+        Vector3 pos = transform.position;
 
         return new PlayerData()
         {
@@ -105,7 +111,7 @@ public class Player : MonoBehaviour, IDamagable
         health = playerData.health;
         onGetDamage?.Invoke(health);
         Vector3 position = new Vector3(playerData.x, playerData.y, 0f);
-        transform.parent.position = position;
+        transform.position = position;
     }
 
     private enum States

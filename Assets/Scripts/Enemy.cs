@@ -119,6 +119,7 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         if (collision.gameObject.tag == "Player")
         {
+            animator.SetInteger("State", (int)States.Idle);
             PlayerDetection = false;
             player = null;
         }
