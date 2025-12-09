@@ -15,7 +15,10 @@ public class ManagerData : MonoBehaviour
     public void SaveGame()
     {
         SaveData data = new SaveData();
-        data.player = player.GetPlayerData();
+        if (player != null)
+        {
+            data.player = player.GetPlayerData();
+        }
         data.enemies = enemySpawner.GetAllEnemiesData();
         data.ammo = ammoManager.GetAmmoData();
         data.inventoryItems = inventory.GetInventoryData();
@@ -32,7 +35,7 @@ public class ManagerData : MonoBehaviour
         player.ApplyPlayerData(data.player);
         ammoManager.ApplyAmmoData(data.ammo);
 
-        if (data.enemies != null)
+        if (data.enemies.Count > 0)
         {
             enemySpawner.ClearAllEnemies();
             enemySpawner.SpawnEnemiesFromSave(data.enemies);
@@ -42,11 +45,6 @@ public class ManagerData : MonoBehaviour
         {
             inventory.ApplyInventoryData(data.inventoryItems);
         }
-    }
-
-    public void DeleteAllSave()
-    {
-        SystemData.DeleteSave();
     }
 
     private void OnApplicationQuit()

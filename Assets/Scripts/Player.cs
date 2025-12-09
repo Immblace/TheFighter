@@ -90,7 +90,7 @@ public class Player : MonoBehaviour, IDamagable
         if (health == 0)
         {
             onDead?.Invoke();
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 
@@ -108,7 +108,14 @@ public class Player : MonoBehaviour, IDamagable
 
     public void ApplyPlayerData(PlayerData playerData)
     {
-        health = playerData.health;
+        if (playerData.health == 0)
+        {
+            health = 10f;
+        }
+        else
+        {
+            health = playerData.health;
+        }
         onGetDamage?.Invoke(health);
         Vector3 position = new Vector3(playerData.x, playerData.y, 0f);
         transform.position = position;

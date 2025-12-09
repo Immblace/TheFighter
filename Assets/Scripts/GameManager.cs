@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        SystemData.DeleteSave();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
