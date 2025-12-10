@@ -22,6 +22,7 @@ public class ManagerData : MonoBehaviour
         data.enemies = enemySpawner.GetAllEnemiesData();
         data.ammo = ammoManager.GetAmmoData();
         data.inventoryItems = inventory.GetInventoryData();
+        data.dropItems = inventory.GetAllDropData();
 
         SystemData.Save(data);
     }
@@ -44,6 +45,11 @@ public class ManagerData : MonoBehaviour
         if (data.inventoryItems != null)
         {
             inventory.ApplyInventoryData(data.inventoryItems);
+        }
+
+        if(data.dropItems != null)
+        {
+            inventory.SpawnAllItems(data.dropItems);
         }
     }
 

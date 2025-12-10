@@ -846,9 +846,13 @@ MonoBehaviour:
   - {fileID: 1458991522}
   - {fileID: 1534218368}
   countTxt: {fileID: 1254910741}
-  itemPrefabs:
+  inventoryItemPrefabs:
   - {fileID: 6028730863352931798, guid: 4f9af57470920c040af2bcfe7f9b0866, type: 3}
   - {fileID: 995543224776917673, guid: f14d2c12f960b7244b209baf59db9143, type: 3}
+  dropItemPrefabs:
+  - {fileID: 1609563415702380790, guid: 345b61996f8ac2944a37e8839575a0b0, type: 3}
+  - {fileID: 1267059195643162800, guid: f05970632abed564abdb5345d22fff86, type: 3}
+  dropButton: {fileID: 1181682711}
   isFull: 000000000000
 --- !u!1 &309952196
 GameObject:

@@ -1,9 +1,11 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
     [SerializeField] private GameObject itemPrefabInv;
+    [SerializeField] private int itemType;
     private Player player;
 
 
@@ -19,6 +21,22 @@ public class Item : MonoBehaviour
             player.inventory.CheckSlots(itemPrefabInv);
             Destroy(gameObject);
         }
+    }
+
+    public DropData GetDropData()
+    {
+        Vector2 pos = transform.position;
+        return new DropData()
+        {
+            itemType = itemType,
+            x = pos.x,
+            y = pos.y
+        };
+    }
+
+    public void ApplyDropData(DropData data)
+    {
+        transform.position = new Vector3(data.x, data.y, 0f);
     }
 
 

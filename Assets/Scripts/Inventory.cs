@@ -8,7 +8,9 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private GameObject[] slots;
     [SerializeField] private TextMeshProUGUI countTxt;
-    [SerializeField] private GameObject[] itemPrefabs;
+    [SerializeField] private GameObject[] inventoryItemPrefabs;
+    [SerializeField] private GameObject[] dropItemPrefabs;
+    [SerializeField] private Button dropButton;
     public bool[] isFull = new bool[6];
     private bool isActive;
 
@@ -27,6 +29,7 @@ public class Inventory : MonoBehaviour
     {
         isActive = !isActive;
         gameObject.SetActive(isActive);
+        dropButton.gameObject.SetActive(false);
     }
 
     private void CalculateSlots()
@@ -99,7 +102,32 @@ public class Inventory : MonoBehaviour
     {
         foreach (var item in data)
         {
-            GameObject itemPrefab = Instantiate(itemPrefabs[item.itemType], slots[item.slotNumber].transform);
+            GameObject itemPrefab = Instantiate(inventoryItemPrefabs[item.itemType], slots[item.slotNumber].transform);
+        }
+    }
+
+    public List<DropData> GetAllDropData()
+    {
+        List<DropData> list = new List<DropData>();
+
+        Item[] dropItems = FindObjectsByType<Item>(FindObjectsSortMode.None);
+
+        if (dropItems != null)
+        {
+            foreach (Item item in dropItems)
+            {
+                list.Add(item.GetDropData());
+            }
+        }
+        return list;
+    }
+
+    public void SpawnAllItems(List<DropData> data)
+    {
+        foreach (var item in data)
+        {
+            GameObject dropItem = Instantiate(dropItemPrefabs[item.itemType]);
+            dropItem.GetComponent<Item>().ApplyDropData(item);
         }
     }
 
